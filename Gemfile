@@ -1,11 +1,23 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.14'
+# ruby '1.9.2'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
+gem 'simple_form'
 gem 'pg'
+gem 'geocoder'
+gem 'twitter-bootstrap-rails'
+gem 'thin'
+gem 'gmaps4rails'
+gem 'nokogiri'
+gem 'koala'
+gem 'omniauth-facebook'
+gem 'mechanize'
+gem 'has_scope'
+gem 'cancan'
 
 
 # Gems used only for assets and not required
