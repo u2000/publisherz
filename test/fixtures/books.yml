@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  author: MyString
+  ISBN-10: 1
+  language: MyString
+  publisher: MyString
+  review_id: 1
+
+two:
+  title: MyString
+  author: MyString
+  ISBN-10: 1
+  language: MyString
+  publisher: MyString
+  review_id: 1
