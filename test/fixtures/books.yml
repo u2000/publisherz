@@ -3,7 +3,7 @@
 one:
   title: MyString
   author: MyString
-  ISBN-10: 1
+  isbn: 1
   language: MyString
   publisher: MyString
   review_id: 1
@@ -11,7 +11,7 @@ one:
 two:
   title: MyString
   author: MyString
-  ISBN-10: 1
+  isbn: 1
   language: MyString
   publisher: MyString
   review_id: 1

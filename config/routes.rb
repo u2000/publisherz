@@ -1,4 +1,7 @@
 Publisherz::Application.routes.draw do
+  resources :books
+
+
   root :to => "movies#index"
   resources :magazines
   resources :books
