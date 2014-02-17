@@ -6,7 +6,7 @@ class MoviesController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @movies }
+      format.json { render :partial => "movies/index.json" }
       format.xml { render xml: @movies }
     end
   end

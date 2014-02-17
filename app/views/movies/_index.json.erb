@@ -1,0 +1,9 @@
+{ "page":1,"results": [<% @movies.each_with_index do |movie, index| %> 
+	{ 
+	 "id" : <%= raw(movie.id.to_json) %>,
+	 "name" : <%= raw(movie.name.to_json) %>,
+	 "director" : <%= raw(movie.director.to_json) %>,
+	 "writer" : <%= raw(movie.writer.to_json) %>,
+	 "release_date" : <%= raw(movie.release_date.to_json) %>
+	}<% unless index== @movies.count - 1%>,<% end %><% end %>
+] }
