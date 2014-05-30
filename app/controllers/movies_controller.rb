@@ -18,7 +18,7 @@ class MoviesController < ApplicationController
 
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render json: @movie }
+      format.json { render :partial => "movies/show.json" }
       format.xml { render xml: @movie }
     end
   end
