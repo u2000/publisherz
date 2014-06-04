@@ -48,7 +48,7 @@ class MoviesController < ApplicationController
     respond_to do |format|
       if @movie.save
         format.html { redirect_to @movie, notice: 'Movie was successfully created.' }
-        format.json { render json: @movie, status: :created, location: @movie }
+        format.json { render render :partial => "movies/show.json", status: :created, location: @movie }
         format.xml { render xml: @movie, status: :created, location: @movie }
       else
         format.html { render action: "new" }
