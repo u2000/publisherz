@@ -1,0 +1,84 @@
+FORMAT: 1A
+HOST: http://publisherz.herokuapp.com
+
+# Publisherz
+Publisherz API provides info on music, movies, and books.
+
+# Group Movies
+Movie-related resources of the **Publisherz API**
+
+## Movies Collection [/movies]
+### List all Movies [GET]
+
++ Request
+    
+    + Headers
+    
+            Accept: application/json
+
++ Response 200 (application/json)
+
+    + Body
+    
+            { "page":1,"results": [ 
+            { 
+                "id" : 1,
+                "name" : "Breathless"
+            }, 
+            { 
+                "id" : 2,
+                "name" : "Dr. Strangelove "
+            }, 
+            { 
+             "id" : 6,
+             "name" : "The Princess Bride"
+            }
+            ] }
+        
+### Create a Movie [POST]
+
++ Request (application/json)
+
+        { "name" : "Dr. Strangelove ",
+        "director" : "Stanley Kubrick",
+        "writer" : "Terry Southern",
+        "release_date" : 1964,
+        "storyline" : "An insane general starts a process to nuclear holocaust that a war room of politicians and generals frantically try to stop."
+        }
+
++ Response 201 (application/json)
+
+        {  "id": 1
+        "name" : "Dr. Strangelove ",
+        "director" : "Stanley Kubrick",
+        "writer" : "Terry Southern",
+        "release_date" : 1964,
+        "storyline" : "An insane general starts a process to nuclear holocaust that a war room of politicians and generals frantically try to stop.",
+        "updated_at":"2014-05-30T18:54:12Z"
+        }
+
+## Movie [/movies/{id}]
+A single Movie object with all its details
+
++ Parameters
+    + id (required, number, `1`) ... Numeric `id` of the Movie to perform action with. Has example value.
+
+### Retrieve a Movie [GET]
++ Response 200 (application/json)
+
+    + Header
+
+            Accept: application/json
+
+    + Body
+
+            { "id" : 2,
+                "name" : "Dr. Strangelove ",
+                "director" : "Stanley Kubrick",
+                "writer" : "Terry Southern",
+                "release_date" : 1964,
+                "storyline" : "An insane general starts a process to nuclear holocaust that a war room of politicians and generals frantically try to stop."
+            }
+
+### Remove a Movie [DELETE]
++ Response 204
